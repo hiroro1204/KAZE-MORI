@@ -1510,7 +1510,7 @@ page > top > top-news
     display: block;
     width: 100%;
     height: 100%;
-    mask-image: url("../../../images/icon_arrow-forward.svg");
+    mask-image: url("../images/icon_arrow-forward.svg");
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;
