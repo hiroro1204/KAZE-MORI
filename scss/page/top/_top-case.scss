@@ -1,0 +1,100 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-case
+------------------------------
+*/
+
+.top-case {
+  overflow: hidden;
+}
+
+.top-case-contents {
+  width: 90%;
+  margin-inline: auto;
+  margin-top: 40px;
+}
+
+.top-case-contents-thumbnail img {
+  object-fit: cover;
+  aspect-ratio: 736/491;
+}
+
+.top-case-contents-description {
+  margin-top: 1em;
+  text-align: center;
+
+  span {
+    display: block;
+    @include g.mq(lg) {
+      display: inline;
+    }
+  }
+}
+
+.top-case-link {
+  bottom: 0;
+
+  @include g.mq(md) {
+    bottom: 64px;
+  }
+}
+
+/*!
+page > top > top-case > swiper
+------------------------------
+*/
+
+.top-case-contents-swiper {
+  overflow: visible;
+}
+
+.top-case-contents-swiper-wrapper,
+.top-case-contents-swiper-slide,
+.top-case-contents-swiper-container,
+.top-case-contents-swiper {
+  position: relative;
+}
+
+/* 位置のreset */
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: unset;
+  margin: 0;
+  padding: 0;
+}
+
+/*!
+page > top > top-case > swiper > pagination(bullets)
+------------------------------
+*/
+
+/* 位置の設定 (枠組み) */
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: calc(100% + 8px);
+  left: 0;
+  text-align: center;
+}
+
+/* それぞれのページネーション */
+.swiper-pagination-bullets.swiper-pagination-horizontal
+  .swiper-pagination-bullet {
+  opacity: 1;
+  width: 40px;
+  height: 3px;
+  border-radius: 0;
+  background: #d9d9d9;
+  margin-inline: calc(11px / 2);
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
+
+/* activeな部分 */
+.swiper-pagination-bullets.swiper-pagination-horizontal
+  .swiper-pagination-bullet-active {
+  background: var(--color-bg-primary);
+}

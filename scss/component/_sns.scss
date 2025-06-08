@@ -1,0 +1,15 @@
+@use "../global" as g;
+
+/*!
+component > sns
+------------------------------
+*/
+
+.c-sns {
+  display: flex;
+  gap: 12px;
+}
+
+.c-sns-icon {
+  width: 40px;
+}

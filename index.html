@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>KAZE&MORI</title>
+    <meta
+      name="description"
+      content="長野県の建築会社KAZE&MORIは、信州の木と、職人の手仕事でつくる住まいを提供しています。"
+    />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon/webclipicon -->
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="" />
+
+    <!-- ogp -->
+    <meta property="og:site_name" content="KAZE&MORI" />
+    <meta property="og:url" content="URL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="KAZE&MORI" />
+    <meta
+      property="og:description"
+      content="長野県の建築会社KAZE&MORIは、信州の木と、職人の手仕事でつくる住まいを提供しています。"
+    />
+    <meta property="og:image" content="URL" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:description"
+      content="長野県の建築会社KAZE&MORIは、信州の木と、職人の手仕事でつくる住まいを提供しています。"
+    />
+    <meta name="twitter:image:src" content="URL" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+
+    <!-- js -->
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/main.js" type="module"></script>
+  </head>
+
+  <body>
+    <!-- loading -->
+    <div class="c-loader js-loader">
+      <div class="c-loader-inner">
+        <div class="c-loader-spinner"></div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <div class="l-header-overlay"></div>
+    <header class="l-header js-header">
+      <div class="l-header-wrap">
+        <div class="l-header-inner">
+          <h1 class="l-header-logo">
+            <a href="/">
+              <img
+                src="/images/logo.png"
+                width="900"
+                height="120"
+                alt="KAZE&MORI"
+                decoding="async"
+              />
+            </a>
+          </h1>
+          <nav class="l-header-nav js-header-nav" aria-label="ナビゲーション">
+            <ul class="l-header-nav-list">
+              <li class="l-header-nav-item">
+                <a href="#about" class="l-header-nav-link">私たちの家づくり</a>
+              </li>
+              <li class="l-header-nav-item">
+                <a href="#service" class="l-header-nav-link">サービス</a>
+              </li>
+              <li class="l-header-nav-item">
+                <a href="#case" class="l-header-nav-link">施工事例</a>
+              </li>
+              <li class="l-header-nav-item">
+                <a href="#review" class="l-header-nav-link">お客様の声</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <ul class="l-header-link-list">
+          <li class="l-header-link-item">
+            <a href="#" class="c-button c-button--green">見学予約</a>
+          </li>
+          <li class="l-header-link-item">
+            <a href="#" class="c-button c-button--green">施工事例</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="l-header-menu-button">
+        <button class="c-hamburger-menu js-button" aria-label="メニューを開く">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="l-header-menu js-menu">
+        <div class="l-header-menu-inner">
+          <div class="l-header-menu-logo">
+            <img
+              src="/images/logo.png"
+              width="900"
+              height="120"
+              alt="KAZE&MORI"
+              decoding="async"
+            />
+          </div>
+          <ul class="l-header-menu-link-list">
+            <li class="l-header-menu-link-item">
+              <a href="#" class="c-button c-button--white">見学予約</a>
+            </li>
+            <li class="l-header-menu-link-item">
+              <a href="#" class="c-button c-button--white">施工事例</a>
+            </li>
+          </ul>
+          <nav class="l-header-menu-nav" aria-label="ナビゲーション">
+            <ul class="l-header-menu-nav-list">
+              <li class="l-header-menu-nav-item js-header-menu-nav-item">
+                <a href="#about" class="l-header-menu-nav-link"
+                  >私たちの家づくり</a
+                >
+              </li>
+              <li class="l-header-menu-nav-item js-header-menu-nav-item">
+                <a href="#service" class="l-header-menu-nav-link">サービス</a>
+              </li>
+              <li class="l-header-menu-nav-item js-header-menu-nav-item">
+                <a href="#case" class="l-header-menu-nav-link">施工事例</a>
+              </li>
+              <li class="l-header-menu-nav-item js-header-menu-nav-item">
+                <a href="#review" class="l-header-menu-nav-link">お客様の声</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- top-kv -->
+      <div class="top-kv top-scroll-parallax-item">
+        <div class="top-kv-copy">
+          <span class="js-kv-text">信州の木と、</span>
+          <span class="js-kv-text">職人の手仕事でつくる住まい</span>
+        </div>
+      </div>
+
+      <div class="top-scroll-parallax-wrap">
+        <!-- top-about -->
+        <section
+          id="about"
+          class="top-about l-section-link-position top-scroll-snap-item02 js-about-scrollTarget"
+        >
+          <div class="l-container-s">
+            <div class="c-section-title">
+              <h2 class="c-section-title-jp">私たちの家づくり</h2>
+              <span class="c-section-title-en">About</span>
+            </div>
+
+            <div class="top-about-content">
+              <div class="top-about-text js-top-about-text">
+                <span>「森の恵みを活かした自然素材の家」</span>
+                <span
+                  >地元・信州産の木材をふんだんに使用し、温もりのある空間に。</span
+                >
+              </div>
+              <div class="top-about-text js-top-about-text">
+                <span>「夏も冬も快適な高断熱・高気密設計」</span>
+                <span>信州の寒さに強く、省エネで暮らせる住宅性能</span>
+              </div>
+              <div class="top-about-text js-top-about-text">
+                <span>「風と光を活かす設計」</span>
+                <span>自然の風が通る快適な間取りで、心地よい暮らしを実現</span>
+              </div>
+            </div>
+            <div class="top-about-link l-section-link">
+              <a href="" class="c-allow-link">
+                <span>MORE</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- top-service -->
+        <section
+          id="service"
+          class="top-service l-section-link-position u-ptb js-header-scrollTarget"
+        >
+          <div class="l-container">
+            <div class="c-section-title">
+              <h2 class="c-section-title-jp">サービス</h2>
+              <span class="c-section-title-en">Service</span>
+            </div>
+            <div class="top-service-content">
+              <div class="top-service-introduction">
+                <p class="top-service-introduction-text">
+                  <span
+                    >風と森の工務店では新築注文住宅を中心に、リフォームや不動産の買い取り・販売など、</span
+                  >
+                  <span>住まいに関する幅広いサービスを提供しています。</span>
+                </p>
+              </div>
+              <div class="top-service-list">
+                <section class="top-service-item">
+                  <div class="top-service-thumbnail">
+                    <img
+                      src="/images/image_service-02.jpg"
+                      width="1500"
+                      height="1000"
+                      alt="新築の白い家"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="top-service-description">
+                    <div class="top-service-title">
+                      <h3 class="c-title-level3">新築注文住宅</h3>
+                    </div>
+                    <p class="top-service-text">
+                      <span>
+                        お客様のライフスタイルやご希望に合わせた完全自由設計の注文住宅をご提案。
+                      </span>
+                      <span>
+                        信州の風土に合った「冬暖かく、夏涼しい快適な住まいを実現します。
+                      </span>
+                    </p>
+                  </div>
+                </section>
+                <section class="top-service-item">
+                  <div class="top-service-thumbnail">
+                    <img
+                      src="/images/image_service-03.jpg"
+                      width="1500"
+                      height="1000"
+                      alt="リフォーム中の屋内"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="top-service-description">
+                    <div class="top-service-title">
+                      <h3 class="c-title-level3">リフォーム・イノベーション</h3>
+                    </div>
+                    <p class="top-service-text">
+                      <span>
+                        古くなった住まいを、より快適で暮らしやすい空間へ。
+                      </span>
+                      <span
+                        >耐震補強や耐熱改修、間取り変更など、部分リフォームから大規模リノベーションまで対応します。</span
+                      >
+                    </p>
+                  </div>
+                </section>
+                <section class="top-service-item">
+                  <div class="top-service-thumbnail">
+                    <img
+                      src="/images/image_service-01.jpg"
+                      width="1500"
+                      height="1000"
+                      alt="家が並ぶ街並み"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="top-service-description">
+                    <div class="top-service-title">
+                      <h3 class="c-title-level3">不動産買取・販売</h3>
+                    </div>
+                    <p class="top-service-text">
+                      <span> 土地や中古住宅の買取・販売・仲介にも対応。 </span>
+                      <span>
+                        「土地を探している」「空き家を売りたい」など、不動産に関するご相談も承ります。
+                      </span>
+                    </p>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="top-service-link l-section-link">
+              <a href="" class="c-allow-link">
+                <span>MORE</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- top-section-break -->
+        <div class="top-section-break">
+          <div class="top-section-break-inner">
+            <div class="top-section-break-bg"></div>
+          </div>
+        </div>
+
+        <!-- top-case -->
+        <section id="case" class="top-case l-section-link-position u-ptb">
+          <div class="c-section-title">
+            <h2 class="c-section-title-jp">施工事例</h2>
+            <span class="c-section-title-en">Case</span>
+          </div>
+
+          <div class="top-case-contents">
+            <div class="top-case-contents-inner">
+              <div class="top-case-contents-swiper-container">
+                <div class="swiper top-case-contents-swiper">
+                  <div class="swiper-wrapper top-case-contents-swiper-wrapper">
+                    <div class="swiper-slide top-case-contents-swiper-slide">
+                      <div class="top-case-contents-thumbnail">
+                        <img
+                          src="/images/image_case-01.jpeg"
+                          width="7360"
+                          height="4912"
+                          alt="施工事例1"
+                          decoding="async"
+                        />
+                      </div>
+                      <div class="top-case-contents-description">
+                        <div class="top-case-contents-title">
+                          <span>安曇野市S様邸</span>
+                        </div>
+                        <p class="top-case-contents-text">
+                          <span>自然素材の温もりを感じる、</span>
+                          <span>家族が集う広々としたLDKのある家</span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide top-case-contents-swiper-slide">
+                      <div class="top-case-contents-thumbnail">
+                        <img
+                          src="/images/image_case-02.jpeg"
+                          width="7360"
+                          height="4912"
+                          alt="施工事例2"
+                          decoding="async"
+                        />
+                      </div>
+                      <div class="top-case-contents-description">
+                        <div class="top-case-contents-title">
+                          <span>大町市M様邸</span>
+                        </div>
+                        <p class="top-case-contents-text">
+                          <span>吹き抜けとアイアン階段が映える、</span>
+                          <span>光と風が巡る開放的なリビングの家</span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide top-case-contents-swiper-slide">
+                      <div class="top-case-contents-thumbnail">
+                        <img
+                          src="/images/image_case-03.jpeg"
+                          width="7360"
+                          height="4912"
+                          alt="施工事例3"
+                          decoding="async"
+                        />
+                      </div>
+                      <div class="top-case-contents-description">
+                        <div class="top-case-contents-title">
+                          <span>塩尻市T様邸</span>
+                        </div>
+                        <p class="top-case-contents-text">
+                          <span
+                            >アウトドア好きのための広い土間とガレージを備えた、</span
+                          >
+                          <span>趣味を楽しむ家</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-case-link l-section-link">
+            <a href="" class="c-allow-link">
+              <span>MORE</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- top-review -->
+        <section id="review" class="top-review l-container">
+          <div class="c-section-title">
+            <h2 class="c-section-title-jp">お客様の声</h2>
+            <span class="c-section-title-en">Review</span>
+          </div>
+
+          <div class="top-review-content">
+            <div class="top-review-list">
+              <section class="top-review-item">
+                <div class="top-review-thumbnail">
+                  <img
+                    src="/images/image_review-02.jpeg"
+                    width="6000"
+                    height="4000"
+                    alt="K様家族の写真"
+                    decoding="async"
+                  />
+                </div>
+                <div class="top-review-description">
+                  <div class="top-review-description-inner">
+                    <div class="top-review-title">
+                      <h3 class="c-title-level3">K様(松本市・注文住宅)</h3>
+                    </div>
+                    <p class="top-review-text">
+                      「冬でも暖かく、結露しない快適な家になりました！」
+                    </p>
+                  </div>
+                  <div class="top-review-link">
+                    <a href="" class="c-allow-link">
+                      <span>MORE</span>
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <section class="top-review-item">
+                <div class="top-review-thumbnail">
+                  <img
+                    src="/images/image_review-01.jpeg"
+                    width="6000"
+                    height="4000"
+                    alt="S様家族の写真"
+                    decoding="async"
+                  />
+                </div>
+                <div class="top-review-description">
+                  <div class="top-review-description-inner">
+                    <div class="top-review-title">
+                      <h3 class="c-title-level3">S様(安曇野市・リフォーム)</h3>
+                    </div>
+                    <p class="top-review-text">
+                      「地元の木を使った自分たちの理想の家が叶いました！」
+                    </p>
+                  </div>
+                  <div class="top-review-link">
+                    <a href="" class="c-allow-link">
+                      <span>MORE</span>
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <section class="top-review-item">
+                <div class="top-review-thumbnail">
+                  <img
+                    src="/images/image_review-03.jpeg"
+                    width="6000"
+                    height="4000"
+                    alt="T様家族の写真"
+                    decoding="async"
+                  />
+                </div>
+                <div class="top-review-description">
+                  <div class="top-review-description-inner">
+                    <div class="top-review-title">
+                      <h3 class="c-title-level3">T様(長野市・注文住宅)</h3>
+                    </div>
+                    <p class="top-review-text">
+                      「親身な対応で、納得のいく家づくりができました！」
+                    </p>
+                  </div>
+                  <div class="top-review-link">
+                    <a href="" class="c-allow-link">
+                      <span>MORE</span>
+                    </a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <!-- top-journal -->
+        <section id="journal" class="top-journal l-section-link-position u-ptb">
+          <div class="l-container">
+            <div class="c-section-title">
+              <h2 class="c-section-title-jp">地域の情報</h2>
+              <span class="c-section-title-en">Journal</span>
+            </div>
+            <div class="top-journal-list">
+              <article class="top-journal-card">
+                <a href="#" class="top-journal-link">
+                  <div class="top-journal-thumbnail">
+                    <img
+                      src="/images/image_journal-01.jpg"
+                      width="6000"
+                      height="4000"
+                      alt="地域の情報1"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="top-journal-title">
+                    国宝松本城の庭園を楽しむ散策コース
+                  </h3>
+                </a>
+              </article>
+              <article class="top-journal-card">
+                <a href="#" class="top-journal-link">
+                  <div class="top-journal-thumbnail">
+                    <img
+                      src="/images/image_journal-02.jpg"
+                      width="6000"
+                      height="4000"
+                      alt="地域の情報2"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="top-journal-title">
+                    見ごろを迎えた開智学校のフジ
+                  </h3>
+                </a>
+              </article>
+              <article class="top-journal-card">
+                <a href="#" class="top-journal-link">
+                  <div class="top-journal-thumbnail">
+                    <img
+                      src="/images/image_journal-03.jpg"
+                      width="6000"
+                      height="4000"
+                      alt="地域の情報3"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="top-journal-title">
+                    絶好のアクティビティポイント５選
+                  </h3>
+                </a>
+              </article>
+              <article class="top-journal-card">
+                <a href="#" class="top-journal-link">
+                  <div class="top-journal-thumbnail">
+                    <img
+                      src="/images/image_journal-04.jpg"
+                      width="6000"
+                      height="4000"
+                      alt="地域の情報4"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="top-journal-title">
+                    朝活部のおすすめ山岳観察スポット
+                  </h3>
+                </a>
+              </article>
+            </div>
+            <div class="top-journal-link l-section-link">
+              <a href="" class="c-allow-link">
+                <span>MORE</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- top-news -->
+        <section id="news" class="top-news l-section-link-position">
+          <div class="l-container-s">
+            <div class="c-section-title">
+              <h2 class="c-section-title-jp">お知らせ</h2>
+              <span class="c-section-title-en">News</span>
+            </div>
+
+            <div class="top-news-list">
+              <article class="top-news-card">
+                <a href="" class="top-news-card-link">
+                  <data value="2025-06-07" class="top-news-date"
+                    >2025.06.07</data
+                  >
+                  <h3 class="top-news-title">夏季休暇のお知らせ</h3>
+                </a>
+              </article>
+              <article class="top-news-card">
+                <a href="" class="top-news-card-link">
+                  <data value="2025-06-01" class="top-news-date"
+                    >2025.06.01</data
+                  >
+                  <h3 class="top-news-title">
+                    新着の注文住宅の施工事例を公開しました
+                  </h3>
+                </a>
+              </article>
+              <article class="top-news-card">
+                <a href="" class="top-news-card-link">
+                  <data value="2025-05-15" class="top-news-date"
+                    >2025.05.15</data
+                  >
+                  <h3 class="top-news-title">
+                    子どもと一緒に楽しめるイベントを開催します
+                  </h3>
+                </a>
+              </article>
+            </div>
+            <div class="top-news-link l-section-link">
+              <a href="" class="c-allow-link">
+                <span>MORE</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="l-footer">
+      <div class="l-container">
+        <div class="l-footer-logo">
+          <a href="#">
+            <img
+              src="./images/logo.png"
+              width="900"
+              height="120"
+              alt="KAZE&MORI"
+              decoding="async"
+            />
+          </a>
+        </div>
+
+        <div class="l-footer-body">
+          <address class="l-footer-contact">
+            <p class="l-footer-contact-address">
+              〒390-0815<br />
+              長野県松本市旭町0-00-00
+            </p>
+            <div class="l-footer-contact-inner">
+              <p class="l-footer-contact-tel">
+                電話：
+                <a href="tel:0120-000-000" class="l-footer-contact-tel-link">
+                  0120-000-000
+                </a>
+              </p>
+
+              <p class="l-footer-contact-mail">
+                メール：
+                <a
+                  href="mailto:info@kaze-mori.co.jp"
+                  class="l-footer-contact-mail-link"
+                >
+                  info@kaze-mori.co.jp
+                </a>
+              </p>
+
+              <p class="l-footer-contact-hours">
+                営業時間：
+                <time datetime="10:00">10:00</time>-<time datetime="18:00"
+                  >18:00</time
+                >
+              </p>
+
+              <p class="l-footer-contact-holiday">定休日：日曜・祝日</p>
+            </div>
+          </address>
+
+          <nav class="l-footer-nav" aria-label="フッター・サイトナビゲーション">
+            <ul class="l-footer-nav-list">
+              <li class="l-footer-nav-item">
+                <span class="l-footer-nav-heading">私たちの家づくり</span>
+                <ul class="l-footer-nav-sub-list">
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">サービス</a>
+                  </li>
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">施工事例</a>
+                  </li>
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">お客様の声</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="l-footer-nav-item">
+                <span class="l-footer-nav-heading">会社について</span>
+                <ul class="l-footer-nav-sub-list">
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">企業概要</a>
+                  </li>
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">企業理念</a>
+                  </li>
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">社長あいさつ</a>
+                  </li>
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">スタッフ紹介</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="l-footer-nav-item">
+                <span class="l-footer-nav-heading">商品・サービス</span>
+                <ul class="l-footer-nav-sub-list">
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">ブランド</a>
+                  </li>
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">サービス</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="l-footer-nav-item">
+                <span class="l-footer-nav-heading">お問い合わせ</span>
+                <ul class="l-footer-nav-sub-list">
+                  <li class="l-footer-nav-sub-item"><a href="#">メール</a></li>
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">お見積り</a>
+                  </li>
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">資料請求</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="l-footer-nav-item">
+                <span class="l-footer-nav-heading">その他</span>
+                <ul class="l-footer-nav-sub-list">
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">採用情報</a>
+                  </li>
+                  <li class="l-footer-nav-sub-item">
+                    <a href="#">個人情報保護方針</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="l-footer-foot">
+          <div class="l-footer-sns-list">
+            <ul class="c-sns">
+              <li class="c-sns-icon">
+                <a href="https://www.instagram.com/"
+                  ><img
+                    src="./images/icon_instagram.svg"
+                    width="512"
+                    height="512"
+                    alt="instagram"
+                    decoding="async"
+                /></a>
+              </li>
+              <li class="c-sns-icon">
+                <a href="https://www.facebook.com/"
+                  ><img
+                    src="./images/icon_facebook.svg"
+                    width="512"
+                    height="512"
+                    alt="Facebook"
+                    decoding="async"
+                /></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="l-footer-button-list">
+            <div class="l-footer-button">
+              <a href="#" class="c-button c-button--transparent">見学予約</a>
+            </div>
+            <div class="l-footer-button">
+              <a href="#" class="c-button c-button--transparent">施工事例</a>
+            </div>
+          </div>
+        </div>
+        <small class="l-footer-copyright">©Kaze mo Mori no Koumuten</small>
+      </div>
+    </footer>
+  </body>
+</html>

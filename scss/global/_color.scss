@@ -1,0 +1,17 @@
+/*!
+global > color
+------------------------------
+*/
+:root {
+  --color-font-base: #333;
+  --color-font-white: #fff;
+  --color-font-primary: #007a89;
+  --color-bg-base: #e9dcd4;
+  --color-bg-hover: color-mix(
+    in srgb,
+    var(--color-bg-base) 100%,
+    var(--color-bg-white) 10%
+  );
+  --color-bg-primary: #007a89;
+  --color-bg-white: #fff;
+}

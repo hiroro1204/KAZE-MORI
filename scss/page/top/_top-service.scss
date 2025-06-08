@@ -1,0 +1,77 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-service
+------------------------------
+*/
+
+.top-service-introduction {
+  margin-top: 40px;
+  font-size: 16px;
+  @include g.mq(lg) {
+    font-size: 18px;
+  }
+
+  .top-service-introduction-text {
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+  span {
+    @include g.mq(md) {
+      display: block;
+    }
+  }
+}
+
+.top-service-list {
+  padding: 64px 0;
+  display: grid;
+  gap: 56px;
+  @include g.mq(md) {
+    gap: 72px;
+  }
+}
+.top-service-item {
+  display: grid;
+  gap: 24px;
+
+  @include g.mq(md) {
+    grid-template-columns: minmax(auto, 420px) minmax(320px, 1fr);
+  }
+
+  &:nth-child(2n) {
+    @include g.mq(md) {
+      grid-template-columns: minmax(320px, 1fr) minmax(auto, 420px);
+
+      .top-service-description {
+        order: -1;
+        justify-self: end;
+      }
+    }
+  }
+}
+
+.top-service-description {
+  align-self: center;
+  @include g.mq(md) {
+    max-width: 340px;
+  }
+}
+
+.top-service-title {
+  text-align: center;
+}
+
+.top-service-text {
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: 16px;
+
+  @include g.mq(md) {
+    margin-top: 24px;
+  }
+  span {
+    display: block;
+  }
+}

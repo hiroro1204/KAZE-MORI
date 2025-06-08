@@ -1,0 +1,62 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-kv
+------------------------------
+*/
+.top-kv {
+  background-image: url("../../images/bg_top-kv.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.top-kv-copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: inline-flex;
+  flex-direction: column;
+  color: var(--color-font-white);
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  @include g.mq(md) {
+    font-size: 48px;
+  }
+
+  @include g.mq(xl) {
+    flex-direction: row;
+  }
+
+  span {
+    opacity: 0;
+  }
+
+  // 読み込み後にspanごとに時間差で表示するアニメーション
+  span:nth-child(1).is-fade-in {
+    animation: kvFadeIn 1s ease-out 1 forwards;
+  }
+  span:nth-child(2).is-fade-in {
+    animation: kvFadeIn 1s ease-out 0.5s 1 forwards;
+  }
+
+  // keyframes
+  @keyframes kvFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

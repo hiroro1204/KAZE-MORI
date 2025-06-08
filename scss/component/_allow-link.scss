@@ -1,0 +1,66 @@
+@use "../global" as g;
+
+/*!
+component > allow-link
+------------------------------
+*/
+.c-allow-link {
+  width: 75px;
+  display: inline-block;
+  position: relative;
+  transition: translate 0.3s ease-out;
+
+  span {
+    font-size: 12px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    height: 1px;
+    background-color: var(--color-font-base);
+    position: absolute;
+  }
+
+  &::before {
+    width: 75px;
+    bottom: 0;
+    left: 0;
+  }
+
+  &::after {
+    width: 20px;
+    bottom: 0;
+    right: 0;
+    transform: rotate(30deg);
+    transform-origin: right;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      translate: 5px 0;
+
+      span {
+        color: var(--color-font-primary);
+      }
+
+      &::before,
+      &::after {
+        background-color: var(--color-font-primary);
+      }
+    }
+  }
+
+  &:focus {
+    translate: 5px 0;
+
+    span {
+      color: var(--color-font-primary);
+    }
+
+    &::before,
+    &::after {
+      background-color: var(--color-font-primary);
+    }
+  }
+}

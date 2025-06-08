@@ -1,0 +1,51 @@
+@use "../global" as g;
+
+/*!
+component > hamburger-menu
+------------------------------
+*/
+
+.c-hamburger-menu {
+  display: block;
+  position: relative;
+  width: 60px; /* お好みのサイズに */
+  height: 40px; /* お好みのサイズに */
+  cursor: pointer;
+  z-index: var(--z-index-header-menu);
+}
+
+.c-hamburger-menu span {
+  position: absolute;
+  right: 0;
+  background-color: var(--color-font-white);
+  height: 2px; /* お好みの太さに */
+  width: 60px; /* お好みの幅に */
+  transition: all 0.2s ease-out;
+  border-radius: 1px;
+  opacity: 1;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.c-hamburger-menu span:nth-of-type(1) {
+  top: 10px;
+}
+.c-hamburger-menu span:nth-of-type(2) {
+  bottom: 10px;
+}
+
+// メニューを閉じるときの回転アニメーション
+.c-hamburger-menu.is-active span:nth-of-type(1) {
+  transform: translateY(8px) rotate(-45deg);
+}
+.c-hamburger-menu.is-active span:nth-of-type(2) {
+  transform: translateY(-8px) rotate(45deg);
+}
+
+// メニューの開閉時のフェードアニメーション
+.c-hamburger-menu.is-active span {
+  opacity: 1;
+}
+
+.backcolor {
+  background-color: rgba(0, 0, 0, 0.8);
+}

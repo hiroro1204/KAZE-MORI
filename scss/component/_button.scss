@@ -1,0 +1,53 @@
+@use "../global" as g;
+
+/*!
+component > button
+------------------------------
+*/
+.c-button {
+  padding: 8px 28px;
+  display: inline-block;
+  border-radius: 12px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.c-button--green {
+  background-color: var(--color-bg-primary);
+  color: var(--color-font-white);
+  border: 2px solid var(--color-bg-primary);
+  font-weight: bold;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: transparent;
+      color: var(--color-font-primary);
+      font-weight: bold;
+    }
+  }
+}
+
+.c-button--white {
+  background-color: var(--color-bg-white);
+  color: var(--color-font-primary);
+  border: 2px solid var(--color-bg-white);
+  font-weight: bold;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: transparent;
+      color: var(--color-font-white);
+    }
+  }
+}
+
+.c-button--transparent {
+  color: var(--color-font-white);
+  border: 2px solid var(--color-bg-white);
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--color-bg-white);
+      color: var(--color-font-primary);
+    }
+  }
+}

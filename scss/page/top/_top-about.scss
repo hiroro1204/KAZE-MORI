@@ -1,0 +1,100 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-kv
+------------------------------
+*/
+
+.top-about {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("../../../images/bg_top-about.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  display: grid;
+  place-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none; /* クリック遮らない */
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.top-about-content {
+  margin: 48px 0;
+  display: grid;
+  gap: 48px;
+
+  @include g.mq(md) {
+    gap: 64px;
+  }
+}
+
+.top-about-text {
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+
+  @include g.mq(sm) {
+    font-size: 16px;
+  }
+
+  @include g.mq(md) {
+    font-size: 20px;
+  }
+
+  // fade-in animation
+  &:nth-child(1) {
+    &.is-fade-in {
+      animation: aboutFadeIn 2s ease-out 0.5s 1 forwards;
+    }
+  }
+
+  &:nth-child(2) {
+    @include g.mq(md) {
+      justify-self: center;
+    }
+
+    &.is-fade-in {
+      animation: aboutFadeIn 2s ease-out 1s 1 forwards;
+    }
+  }
+
+  &:nth-child(3) {
+    @include g.mq(md) {
+      justify-self: end;
+    }
+
+    &.is-fade-in {
+      animation: aboutFadeIn 2s ease-out 1.5s 1 forwards;
+    }
+  }
+
+  // keyframes
+  @keyframes aboutFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.top-about-text span {
+  display: block;
+}
+
+.top-about-link {
+  bottom: -32px;
+}

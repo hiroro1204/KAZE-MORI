@@ -1,0 +1,108 @@
+@use "../global" as g;
+
+/*!
+layout > footer
+------------------------------
+*/
+
+.l-footer {
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-bg-primary);
+  padding: 48px 0 24px;
+  @include g.mq(md) {
+    padding: 100px 0 24px;
+  }
+  color: (var(--color-font-white));
+}
+
+.l-footer-logo {
+  width: 140px;
+}
+
+.l-footer-body {
+  margin-top: 32px;
+  display: grid;
+  gap: 24px;
+
+  @include g.mq(md) {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+.l-footer-contact {
+  line-height: 1.2;
+}
+
+.l-footer-contact-inner {
+  margin-top: 8px;
+}
+
+.l-footer-nav-list {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include g.mq(sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include g.mq(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include g.mq(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include g.mq(xl) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.l-footer-nav-heading {
+  font-size: 16px;
+
+  @include g.mq(md) {
+    font-size: 18px;
+  }
+}
+
+.l-footer-nav-sub-list {
+  margin-top: 8px;
+}
+
+.l-footer-foot {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include g.mq(md) {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+.l-footer-sns-list {
+  @include g.mq(md) {
+    translate: 0 -4px;
+  }
+}
+
+.l-footer-button-list {
+  display: flex;
+  gap: 24px;
+  @include g.mq(md) {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+.l-footer-copyright {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+}

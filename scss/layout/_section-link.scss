@@ -1,0 +1,24 @@
+@use "../global" as g;
+
+/*!
+layout > section-link
+------------------------------
+*/
+
+.l-section-link-position {
+  position: relative;
+}
+
+.l-section-link {
+  position: absolute;
+  bottom: 64px;
+  right: 5%;
+
+  @include g.mq(md) {
+    // bottom: 120px;
+  }
+
+  @include g.mq(xxl) {
+    right: calc(50% - 624px);
+  }
+}
