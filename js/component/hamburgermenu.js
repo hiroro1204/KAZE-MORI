@@ -103,6 +103,13 @@ export const initializeHamburgerMenu = () => {
     }
   });
 
+  // メニュー以外をクリックすると、メニューが閉じる
+  overlay.addEventListener("click", (event) => {
+    if (event.target.closest(".js-menu") === null) {
+      closeMenu();
+    }
+  });
+
   // メニュー内のリンクをクリックしたらメニューを閉じる
   menuNavItems.forEach((item) => {
     item.addEventListener("click", () => {

@@ -14,19 +14,20 @@ layout > header
   height: 100px;
   display: flex;
   align-items: center;
+}
+
+.l-header-wrap {
+  width: 90%;
+  height: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   transition: transform 0.5s ease-out;
 
   &.is-hidden {
     transform: translateY(-100%);
   }
-}
-
-.l-header-wrap {
-  width: 90%;
-  margin-inline: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .l-header-logo {
@@ -102,7 +103,7 @@ layout > header
 
 .l-header-overlay.is-active {
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: var(--z-index-default);
+  z-index: var(--z-index-header-menu);
 }
 
 .l-header-menu {

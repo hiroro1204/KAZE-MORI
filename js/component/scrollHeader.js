@@ -16,29 +16,27 @@ export const initializeScrollHeader = () => {
      */
 
     // IntersectionObserverのOption
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0,
-    };
+    // const observerOptions = {
+    //   root: null,
+    //   rootMargin: "0px",
+    //   threshold: 0,
+    // };
 
-    const headerNavVisibilityHandler = (entries) => {
-      entries.forEach((entry) => {
-        // ターゲットの要素の画面外に出た時に実行
-        if (entry.isIntersecting) {
-          console.log("消えてるよ");
-          headerNav.classList.add("is-hidden");
-          scrollObserver.unobserve(scrollTargetElement);
-        }
-      });
-    };
+    // const headerNavVisibilityHandler = (entries) => {
+    //   entries.forEach((entry) => {
+    //     // ターゲットの要素の画面外に出た時に実行
+    //     if (entry.isIntersecting) {
+    //       scrollObserver.unobserve(scrollTargetElement);
+    //     }
+    //   });
+    // };
 
-    const scrollObserver = new IntersectionObserver(
-      headerNavVisibilityHandler,
-      observerOptions
-    );
+    // const scrollObserver = new IntersectionObserver(
+    //   headerNavVisibilityHandler,
+    //   observerOptions
+    // );
 
-    scrollObserver.observe(scrollTargetElement);
+    // scrollObserver.observe(scrollTargetElement);
 
     /**
      *  headerを固定にする
@@ -51,12 +49,16 @@ export const initializeScrollHeader = () => {
     window.addEventListener("scroll", () => {
       if (window.scrollY < lastScrollY) {
         // 上方向へスクロールしたらheaderを見せる
+        console.log("上方向へスクロールしたらheaderを見せる");
         header.classList.remove("is-hidden");
+        headerNav.classList.add("is-hidden");
       } else {
         // 下方向へスクロールしたらheaderを隠す
         header.classList.add("is-hidden");
       }
       lastScrollY = window.scrollY;
+      console.log(lastScrollY);
+      console.log(window.scrollY);
     });
   });
 };
